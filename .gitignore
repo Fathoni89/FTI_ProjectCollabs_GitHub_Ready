@@ -1,0 +1,25 @@
+# Configuration and secrets: never commit actual hosting values
+/config.php
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# User data, logs and temporary files
+/storage/uploads/*
+!/storage/uploads/.htaccess
+!/storage/uploads/.gitkeep
+/storage/logs/*
+!/storage/logs/.htaccess
+!/storage/logs/.gitkeep
+*.log
+*.tmp
+*.bak
+*.sql.gz
+*.zip
+.DS_Store
+.idea/
+.vscode/

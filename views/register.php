@@ -1,0 +1,7 @@
+<section class="auth-container"><div class="panel auth-card"><span class="section-kicker">PENDAFTARAN MAHASISWA</span><h1>Buat akun tim.</h1><p>Gunakan email yang aktif dan kode pendaftaran dari koordinator prodi/HIMA. Satu akun dapat mengelola pengumpulan proyek kelompok.</p>
+<form method="post" action="<?=h(app_url('/index.php'))?>"><?=csrf_field()?><input type="hidden" name="action" value="register">
+<label>Nama lengkap<input name="name" maxlength="120" autocomplete="name" required></label>
+<div class="two-cols"><label>Email<input type="email" name="email" maxlength="160" required></label><label>NIM<input name="nim" maxlength="40" required></label></div>
+<div class="two-cols"><label>Kelas<select name="class_name" required><option value="">Pilih kelas</option><?php foreach(['IF-5A','IF-5B','IF-5C','IF-5D','Lainnya'] as $cl):?><option value="<?=$cl?>"><?=$cl?></option><?php endforeach;?></select></label><label>Kode pendaftaran<input name="registration_code" autocomplete="off" required></label></div>
+<label>Kata sandi (minimal 12 karakter)<input name="password" type="password" minlength="12" autocomplete="new-password" required></label>
+<button type="submit" class="btn primary full">Buat Akun ↗</button></form><p class="auth-help">Sudah punya akun? <a href="<?=h(route_url('login'))?>">Masuk</a>.</p></div><aside class="auth-side"><span class="icon-huge">◆</span><h2>Proyek yang<br>terdokumentasi.</h2><p>Unggah poster, laporan, prototype Figma, source code, dan video demo untuk persiapan FTI Fest Januari.</p></aside></section>

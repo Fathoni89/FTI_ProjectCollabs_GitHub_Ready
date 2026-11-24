@@ -1,0 +1,1 @@
+<section class="container inner-page"><div class="empty-state"><div class="empty-icon">!</div><h1><?=h($error_message??'Terjadi kesalahan')?></h1><p>Periksa alamat halaman atau kembali ke beranda portal.</p><a class="btn primary" href="<?=h(route_url('home'))?>">Kembali ke Beranda</a></div></section>
